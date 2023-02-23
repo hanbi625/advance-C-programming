@@ -32,3 +32,42 @@ int main() {
 
 	return 0;
 }
+/*
+#pragma warning(disable:4996)
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str[1000] = { '\0' }, word[10][100] = { '\0' }, tmp[100];
+    int k=0, len = 0, i = 0, j = 0, cnt = 0;
+
+    gets(str);
+    len = strlen(str);
+
+    for (k = 0; k <= len;k++) {
+        if (str[k] == ' '||str[k]=='\0') {
+            word[i][j] = '\0';
+            i++;
+            cnt++;
+            j = 0;
+        }
+        else {
+            word[i][j] = str[k];
+            j++;
+        }
+    }
+    for (i = 0; i < cnt; i++)
+        puts(word[i]);
+    for (i = 0; i < cnt; i++) {
+        for (j = 0; j < cnt-1; j++)
+            if (word[j][0]> word[j + 1][0]) {
+                strcpy(tmp, word[j]);
+                strcpy(word[j], word[j + 1]);
+                strcpy(word[j + 1], tmp);
+            }
+    }
+    for (i = 0; i < cnt; i++)
+        puts(word[i]);
+
+    return 0;
+}
+*/
